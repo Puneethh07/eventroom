@@ -1,174 +1,113 @@
-:root {
-    --github-bg: #111111;
-    --github-header: #221b16;
-    --github-border: #3d3630;
-    --github-text: #c9d1d9;
-    --github-link: #58a6ff;
-    --github-hover: #21262d;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antaragni Event Room Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="zalando-sans-expanded-bold">Event Room Information</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </header>
+        
+        <main>
+            <div class="table-container">
+                <table id="roomTable">
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Room No</th>
+                            <th>Block</th>
+                            <th>Floor No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Solo Dance
+                            </td>
+                            <td>LH 15 -Boys<br>
+                                LH 16 -Girls</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Fashion Walk</td>
+                            <td>LH 1<br>
+                                LH 2<br>
+                                LH 3<br>
+                                LH 4<br>
+                            IIC ROOM</td>
+                            <td>Degree Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Group Dance</td>
+                            <td>LH 7<br>
+                                LH 8<br>
+                                LH 9<br>
+                                LH 10<br>
+                            LH 11</td>
+                            <td>Degree Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Solo Singing</td>
+                            <td>LH 25</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Carrom</td>
+                            <td>LH 14</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>BGMI</td>
+                            <td>LH 18<br>
+                            LH 19<br>
+                        LH 20</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Free Fire</td>
+                            <td>LH 21<br>
+                                LH 22<br>
+                            LH 23</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Guess the song</td>
+                            <td>LH 24</td>
+                            <td>PU Block</td>
+                            <td>1</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2K25 Antharagni</P>
+        </footer>
+    </div>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-body {
-    background-color: var(--github-bg);
-    color: var(--github-text);
-    line-height: 1.5;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: var(--github-header);
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    border: 1px solid var(--github-border);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Add this to your existing CSS file */
-.zalando-sans-expanded {
-  font-family: "Zalando Sans Expanded", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.zalando-sans-expanded-bold {
-  font-family: "Zalando Sans Expanded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* Then update your header h1 styling */
-header h1 {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-    font-family: "Zalando Sans Expanded", sans-serif;
-    font-weight: 700;
-}
-
-.search-container {
-    position: relative;
-    max-width: 100%;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 10px 15px;
-    padding-right: 40px;
-    background-color: var(--github-bg);
-    border: 1px solid var(--github-border);
-    border-radius: 6px;
-    color: var(--github-text);
-    font-size: 14px;
-}
-
-#searchInput:focus {
-    outline: none;
-    border-color: var(--github-link);
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
-}
-
-.search-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #8b949e;
-}
-
-.table-container {
-    overflow-x: auto;
-    border: 1px solid var(--github-border);
-    border-radius: 6px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid var(--github-border);
-}
-
-th {
-    background-color: var(--github-header);
-    font-weight: 600;
-}
-
-tr:hover {
-    background-color: var(--github-hover);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-footer {
-    margin-top: 30px;
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--github-border);
-    color: #8b949e;
-    font-size: 14px;
-}
-
-.github-link {
-    color: var(--github-link);
-    text-decoration: none;
-}
-
-.github-link:hover {
-    text-decoration: underline;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-    
-    th, td {
-        padding: 10px;
-        font-size: 14px;
-    }
-    
-    header h1 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    
-    th, td {
-        padding: 8px;
-        font-size: 13px;
-    }
-    
-    header h1 {
-        font-size: 18px;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>`
